@@ -95,7 +95,11 @@
         font-size: 25px;
     }
 
-    #menu-toggle,
+    .open-menu {
+        display: flex;
+      }
+
+    /* #menu-toggle,
     .menu-icon {
         color: #a60f0f;
     }
@@ -103,8 +107,8 @@
 
     #menu-toggle:checked +
     .navbar-list {
-        display: flex;
-    }
+        display: flex; */
+    /* } */
 
 
 

@@ -72,19 +72,38 @@ header {
     cursor: pointer;
     color: #a60f0f;
     display: flex;
+    position: relative;
 }
+
+.cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    text-align: center;
+    background:#e00c0c;
+    color:white ;
+    font-size: 10px;
+    font-weight: 500;
+    height: 17px;
+    width: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1px;
+    border-radius: 50%;
+  }
 
 /* #cart-toggle {
     display: none;
 } */
 
-#menu-toggle,
-#cart-toggle,
+/* #menu-toggle,
+#cart-toggle, */
 .menu-label {
     display: none;
 }
 
-#menu-toggle,
+/* #menu-toggle, */
 .menu-icon {
     color: #a60f0f;
 }
@@ -99,7 +118,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    /* display: none; */
+    /* display: none;  */
     z-index: 2;
     top: 109px;
     padding: 20px 10px;
@@ -219,6 +238,16 @@ header {
 .cart-total span {
     font-weight: 600;
 }
+
+.open-cart {
+    transform: translate(0%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
+  }
+  
+  .empty-msg {
+    color: var(--text-gray);
+    font-size: 14px;
+  }
 
 .btn-buy {
     color:#a60f0f;
@@ -498,7 +527,9 @@ main {
     justify-content: space-around;
     width: 800px;
     height: 300px;
-    border-radius: 25px;  
+    border-radius: 25px;
+    -webkit-animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  	animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;  
   
 }
 
@@ -707,4 +738,62 @@ footer {
     gap: 30px;
     font-weight: 400;
 }
+
+.hidden {
+    display: none;
+  }
+  
+  .disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+    border: none;
+  }
+  .disabled:hover {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+    border: none;
+  }
+  
+  .add-modal {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    background-color: green;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+  }
+  
+  .active-modal {
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+  }
+  
+  /**
+   * ----------------------------------------
+   * animation fade-in
+   * ----------------------------------------
+   */
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 

@@ -3,19 +3,22 @@ html {
     scroll-padding-top: 120px;
 }
 
-/* .overlay {
+.overlay {
     position: absolute;
-    top: 110px;
-    left: -2px;
+    top: 97px;
     height: 100vh;
-    width: 100%;
+    width: 200%;
     z-index: 1;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     display: none;
-} */
+}
 
- #cart-toggle:checked ~ 
+.show-overlay {
+   display: block;
+ }
+
+ /* #cart-toggle:checked ~ 
  .overlay {
     display: block;
  }
@@ -23,7 +26,7 @@ html {
  #menu-toggle:checked ~
  .overlay {
     display: block;
- }
+ } */
 
  .navbar-list li {
     position: relative;
@@ -98,13 +101,24 @@ html {
    transition: all 0.1s ease-in;
  }
 
- .btn-buy:hover {
+ /* .btn-buy:hover {
    transition: all 0.1s ease-in;
    background-color: orange;
    color: white;
-   /* border: 0.5px solid white; */
-   font-size: 17px;
+   border: 0.5px solid orange;
+
+ } */
+
+ .btn-delete {
+   transition: all 0.1s ease-in;
  }
+
+ /* .btn-delete:hover {
+   transition: all 0.1s ease-in;
+   background-color: orange;
+   color: white;
+   border: 0.5px solid orange;
+ } */
 
  .buttons a {
    transition: all 0.1s ease-in;
@@ -122,7 +136,7 @@ html {
 
  .menu:hover {
    transition: all 0.1s ease-in;
-   background-color: red;
+   background-color:#a60f0f;
    color: white;
    border: none;
  }
@@ -132,18 +146,6 @@ html {
  }
 
  .btn-add:hover {
-   transition: all 0.1s ease-in;
-   background-color: orange;
-   border: 2px solid orange;
-   color: white;
-   /* font-size: 18px; */
- }
-
- .btn-delete {
-   transition: all 0.1s ease-in;
- }
-
- .btn-delete:hover {
    transition: all 0.1s ease-in;
    background-color: orange;
    border: 2px solid orange;

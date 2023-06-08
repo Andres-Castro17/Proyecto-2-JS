@@ -1,0 +1,176 @@
+const productData = [
+    {
+		id: 1,
+		name: "Lomo simple",
+		price: 1900,
+		menu: "lomitos",
+		cardImg: "./assets/Lomo-simple.jpg",
+        description: "Pan, bife de lomo de ternera o pollo, chimichurri, queso, lechuga, tomate y mayonesa casera"
+	},
+    {
+		id: 2,
+		name: "Simple con huevo",
+		price: 2000,
+		menu: "lomitos",
+		cardImg: "./assets/Lomo-simple-con-huevo.jpg",
+        description: "Pan, bife de lomo de ternera o pollo, chimichurri, queso, lechuga, tomate, ají, morrón, huevo y mayonesa casera",
+	},
+    {
+		id: 3,
+		name: "Lomo Especial",
+		price: 2100,
+		menu: "lomitos",
+		cardImg: "./assets/Lomo-especial.png",
+        description: "Pan, bife de lomo de ternera o pollo, chimichurri, queso, lechuga, tomate, ají, morrón, huevo y mayonesa casera",
+	},
+    {
+		id: 4,
+		name: "Simple",
+		price: 1500,
+		menu: "hamburguesas",
+		cardImg: "./assets/Hamburguesa-simple.jpg",
+        description: "Hamburguesa de 150 gr. de carne molida de lomo, queso, lechuga, tomate, y mayonesa casera",
+	},
+    {
+		id: 5,
+		name: "Completa",
+		price: 1600,
+		menu: "hamburguesas",
+		cardImg: "./assets/Hamburguesa-Completa.jpg",
+        description: "Hamburguesa de 150 gr. de carne molida de lomo, queso, lechuga, tomate, huevo y mayonesa casera",
+	},
+    {
+		id: 6,
+		name: "Especial",
+		price: 1700,
+		menu: "hamburguesas",
+		cardImg: "/assets/Hamburguesa-Especial.jpg",
+        description: "Hamburguesa de 150 gr. de carne molida de lomo, queso, ají, morrón, lechuga, tomate, huevo y mayonesa casera",
+	},
+    {
+		id: 7,
+		name: "Americana",
+		price: 1700,
+		menu: "hamburguesas",
+		cardImg: "./assets/Hamburguesa-americana.jpg",
+        description: "Hamburguesa de 150 gr. de carne molida de lomo, queso cheddar, panceta, huevo y mayonesa casera",
+	},
+    {
+		id: 8,
+		name: "Chetanga Simple",
+		price: 1800,
+		menu: "milanesas",
+		cardImg: "./assets/Chetanga-simple.jpg",
+        description: "Bife de nalga rebozado, queso, lechuga, tomate y mayonesa casera",
+	},
+    {
+		id: 9,
+		name: "Chetanga Completa",
+		price: 1900,
+		menu: "milanesas",
+		cardImg: "./assets/Chetanga-completa.jpg",
+        description: "Bife de nalga rebozado, queso, lechuga, tomate, huevo y mayonesa casera",
+	},
+    {
+		id: 10,
+		name: "Chetanga Especial",
+		price: 2000,
+		menu: "milanesas",
+		cardImg: "./assets/Chetanga-Especial.jpg",
+        description: "Bife de nalga rebozado, queso, lechuga, tomate, huevo, ají, morrón y mayonesa casera",
+	},
+    {
+		id: 11,
+		name: "Bife de lomo al plato",
+		price: 1700,
+		menu: "infantil",
+		cardImg: "./assets/lomo-al-plato.jpg",
+        description: "Bife grande de lomo al plato acompañado de papas fritas",
+	},
+    {
+		id: 12,
+		name: "Hamburguesa",
+		price: 1400,
+		menu: "infantil",
+		cardImg: "./assets/Hamburguesa-con-papas.jpeg",
+        description: "150 gr. de carne molida de lomo, queso, acompañado de papas fritas",
+	},
+    {
+		id: 13,
+		name: "Milanesa al plato",
+		price: 1700,
+		menu: "infantil",
+		cardImg: "./assets/milanesa.jpg",
+        description: "Bife de nalga rebozado, acompañado de papas fritas",
+	},
+    {
+		id: 14,
+		name: "Papas Clásicas",
+		price: 1100,
+		menu: "papas",
+		cardImg: "./assets/Papas-clasicas.jpg",
+        description: "Porción grande de papas bastón clásicas",
+	},
+    {
+		id: 15,
+		name: "Papas con huevo",
+		price: 1400,
+		menu: "papas",
+		cardImg: "./assets/Papas-con-huevo.jpg",
+        description: "Porción grande de papas bastón con huevo revuelto",
+	},
+    {
+		id: 16,
+		name: "Papas con cheddar",
+		price: 1700,
+		menu: "papas",
+		cardImg: "./assets/Papas-cheddar.jpg",
+        description: "Porción grande de papas bastón cubiertas de cheddar y panceta",
+	},
+    {
+		id: 17,
+		name: "Flan",
+		price: 600,
+		menu:"postre",
+		cardImg: "./assets/Flan.jpg",
+        description: "",
+	},
+    {
+		id: 18,
+		name: "Chocotorta",
+		price: 600,
+		menu: "postre",
+		cardImg: "./assets/Chocotorta.jpg",
+        description: "",
+	},
+    {
+		id: 19,
+		name: "Tiramisú",
+		price: 600,
+		menu: "postre",
+		cardImg: "./assets/tiramisú.jpg",
+        description: "",
+	},
+    {
+		id: 20,
+		name: "Postre Oreo",
+		price: 600,
+		menu: "postre",
+		cardImg: "./assets/Postre-oreo.jpg",
+        description: "",
+	},
+];
+
+const divideProductsInParts = (size) => {
+	let productsList = [];
+	for (let i = 0; i < productData.length; i+= size) {
+		productsList.push(productData.slice(i, i + size));
+	}
+	return productsList;
+};
+
+const appState = {
+	products: divideProductsInParts(3),
+	currentProductsIndex: 0,
+	activeFilter: null,
+};

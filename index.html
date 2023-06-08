@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>Landing page JS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animaciones.css">
     <link rel="stylesheet" href="mediaqueries.css">
@@ -15,105 +15,59 @@
     <header>
        
         <nav class="navbar">
-
-                <label for="menu-toggle" class="menu-label">
+                <div class="menu-label">
                     <i class="fa-solid fa-bars menu-icon"></i>
-                </label>
-                <input type="checkbox" id="menu-toggle">
+                </div>
+                <!-- <input type="checkbox" id="menu-toggle"> -->
             
-
             <ul class="navbar-list">
-                <li> <a href="#hero"> Inicio</a></li>
-                <li> <a href="#info"> Nosotros</a></li>
-                <li> <a href="#options"> Menú</a></li>  
-                <li> <a href="#contact"> Contactanos</a></li> 
+                <li> <a class="navbar.link" href="#hero"> Inicio</a></li>
+                <li> <a class="navbar.link" href="#info"> Nosotros</a></li>
+                <li> <a class="navbar.link" href="#options"> Menú</a></li>  
+                <li> <a class="navbar.link" href="#contact"> Contactanos</a></li> 
             </ul>
            
-            <img src="/assets/thumbnail_Logo Rojo.jpg" alt="">
-             
-            
+            <img src="/assets/thumbnail_Logo Rojo.jpg" alt="" class="logo.icon">
+     
             <ul class="navbar-login">
-                <li> <a href="login.html"> Ingresar</a></li>
-                <li> <a href="registro.html"> Registrate</a></li>
+                <li> <a class="navbar.log" href="login.html"> Ingresar</a></li>
+                <li> <a class="navbar.log" href="registro.html"> Registrate</a></li>
             </ul>
 
+            <div class="cart-label">
+                <i class="fa-solid fa-cart-shopping cart-icon">
+                    <div class="cart-counter">0</div>
+                </i>
+            </div>
+            <!-- <input type="checkbox" id="cart-toggle"> -->
 
-            <label for="cart-toggle" class="cart-label">
-                <i class="fa-solid fa-cart-shopping cart-icon"></i>
-            </label>
-            <input type="checkbox" id="cart-toggle">
-
-            <!-- Carrito -->
-
-            
+            <!-- Carrito -->        
             <!-- Agregamos productos al carrito -->
-
             <div class="cart">
                 <h2>Tu pedido</h2>
-
-                <div class="cart-item">
-                    <img src="/assets/Lomo especial.png" alt="">
-
-                    <div class="item-info">
-                        <h3 class="item-product">Especial</h3>
-                        <span class="item-price">$6300</span>
-                    </div>
-
-                    <item class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">3</span>
-                        <span class="quantity-handler up">+</span>
-                    </item>
-
+                <div class="cart-container">
+                    <!-- <div class="cart-item">
+                        <img src="/assets/Lomo-especial.png" alt="">
+                        <div class="item-info">
+                            <h3 class="item-product">Lomo Especial</h3>
+                            <span class="item-price">$6300</span>
+                        </div>
+                        <item class="item-handler">
+                            <span class="quantity-handler down">-</span>
+                            <span class="item-quantity">3</span>
+                            <span class="quantity-handler up">+</span>
+                        </item>
+                    </div> -->
                 </div>
-
-                <div class="cart-item">
-                    <img src="/assets/Lomo simple con huevo.jpg" alt="">
-
-                    <div class="item-info">
-                        <h3 class="item-product">C/Huevo</h3>
-                        <span class="item-price">$2000</span>
-                    </div>
-
-                    <item class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">1</span>
-                        <span class="quantity-handler up">+</span>
-                    </item>
-
-                </div>
-
-                <div class="cart-item">
-                    <img src="/assets/Lomo simple.jpg" alt="">
-
-                    <div class="item-info">
-                        <h3 class="item-product">Simple</h3>
-                        <span class="item-price">$3800</span>
-                    </div>
-
-                    <item class="item-handler">
-                        <span class="quantity-handler down">-</span>
-                        <span class="item-quantity">2</span>
-                        <span class="quantity-handler up">+</span>
-                    </item>
-
-                </div>
-
                 <span class="divider"></span>
-
                 <div class="cart-total">
-                    <p>Total</p>
-                    <span>$12.100</span>
+                    <p>Total: </p>
+                    <span class="total">$ 12.100</span>
                 </div>
-
                 <button class="btn-buy">Comprar</button>
-
                 <button class="btn-delete">Vaciar Carrito</button>
-
             </div>
-
             <div class="overlay"></div>
-
         </nav>
     </header>
 
@@ -135,7 +89,7 @@
                     <a href="registro.html">Registrate</a>  
                 </div>
             </div>
-            <img src="./assets/Lomo simple.jpg" alt="" class="hero-img">
+            <img src="./assets/Lomo-simple.jpg" alt="" class="hero-img">
        
         </section>
 
@@ -175,8 +129,8 @@
         <section id="options">
             <h2>Nuestra carta</h2>
             <div class="carta-menu">
-                <button class="menu active">Lomitos</button>
-                <button class="menu" data-menu="habmurguesas">Hamburguesas</button>
+                <button class="menu active" data-menu="lomitos">Lomitos</button>
+                <button class="menu" data-menu="hamburguesas">Hamburguesas</button>
                 <button class="menu" data-menu="milanesas">Milanesas</button>
                 <button class="menu" data-menu="infantil">Infantil</button>
                 <button class="menu" data-menu="papas">Papas</button>
@@ -188,454 +142,32 @@
         <section id="products">
             <div class="product-container">
                 <!-- Primer Lomo -->
-                <div class="product">
-                    <img src="/assets/Lomo simple.jpg" alt="Lomito simple">
+                <!-- <div class="product">
+                    <img src="/assets/Lomo-simple.jpg" alt="Lomito simple">
                     <div class="product-info">
-                        <!-- top -->
                         <div class="product-top">
                             <h3>Lomo Simple</h3>
                         </div>
-
-                        <!-- mid -->
                         <div class="product-mid">
                             <p>Pan, bife de lomo de ternera o pollo, chimichurri, queso, lechuga, tomate y mayonesa casera</p>
                         </div>
-
-                        <!-- bottom -->
                         <div class="product-bot">
                             <span>$1900</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                 
+                            <button 
+                                class="btn-add"
+                                data-id="id"
+                                data-name="name"
+                                data-price="price"
+                                data-img="img"
+                                >Comprar
+                            </button>
+                        </div> 
                     </div>
-                </div>
-
-                <!-- Segundo Lomo -->
-                <div class="product">
-                    <img src="/assets/Lomo simple con huevo.jpg" alt="Lomito simple con huevo">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Simple con huevo</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Pan, bife de lomo de ternera o pollo, chimichurri, queso, lechuga, tomate, huevo y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$2000</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- Tercer Lomo -->
-                <div class="product">
-                    <img src="/assets/Lomo especial.png" alt="Lomito especial">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Lomo Especial</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Pan, bife de lomo de ternera o pollo, chimichurri, queso, lechuga, tomate, ají, morrón, huevo y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$2100</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 1era Hamburguesa (Simple) -->
-                <div class="product">
-                    <img src="/assets/Hamburguesa simple.jpg" alt="Hamburguesa simple">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Simple</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Hamburguesa de 150 gr. de carne molida de lomo, queso, lechuga, tomate, y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1500</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 2da Hamburguesa (Completa) -->
-                <div class="product">
-                    <img src="/assets/Hamburguesa Completa.jpg" alt="Hamburguesa completa">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Completa</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Hamburguesa de 150 gr. de carne molida de lomo, queso, lechuga, tomate, huevo y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1600</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 3era Hamburguesa (Especial) -->
-                <div class="product">
-                    <img src="/assets/Hamburguesa Especial.jpg" alt="Hamburguesa especial">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Especial</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Hamburguesa de 150 gr. de carne molida de lomo, queso, ají, morrón, lechuga, tomate, huevo y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1700</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 4ta Hamburguesa (Americana) -->
-                <div class="product">
-                    <img src="/assets/Hamburguesa americana.jpg" alt="Hamburguesa americana">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Americana</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Hamburguesa de 150 gr. de carne molida de lomo, queso cheddar, panceta, huevo y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1700</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 1era Milanesa (Chetanga Simple) -->
-                <div class="product">
-                    <img src="/assets/Chetanga simple.jpg" alt="Chetanga simple">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Chetanga Simple</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Bife de nalga rebozado, queso, lechuga, tomate y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1800</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 2da Milanesa (Chetanga Completa) -->
-                <div class="product">
-                    <img src="/assets/Chetanga completa.jpg" alt="Chetanga completa">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Chetanga Completa</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Bife de nalga rebozado, queso, lechuga, tomate, huevo y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1900</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 3era Milanesa (Chetanga Especial) -->
-                <div class="product">
-                    <img src="/assets/Chetanga Especial.jpg" alt="Chetanga especial">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Chetanga Especial</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Bife de nalga rebozado, queso, lechuga, tomate, huevo, ají, morrón y mayonesa casera</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$2000</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 1er Infantil (Bife de lomo) -->
-                <div class="product">
-                    <img src="./assets/al plato.jpg" alt="Bife de lomo">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Bife de lomo al plato</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Bife grande de lomo al plato acompañado de papas fritas</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1700</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 2do Infantil (Hamburguesa) -->
-                <div class="product">
-                    <img src="/assets/Hamburguesa simple.jpg" alt="Hamburguesa">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Hamburguesa</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>150 gr. de carne molida de lomo, queso, acompañado de papas fritas</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1400</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 3er Infantil (Milanesa) -->
-                <div class="product">
-                    <img src="/assets/Lomo especial.png" alt="Milanesa">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Milanesa al plato</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Bife de nalga rebozado, acompañado de papas fritas</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1700</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 1er Papas (Solas) -->
-                <div class="product">
-                    <img src="/assets/Papas clasicas.jpg" alt="Papas clasicas">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Papas  clásicas</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Porción grande de papas bastón clásicas</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1100</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 2do Papas (Con huevo) -->
-                <div class="product">
-                    <img src="/assets/Papas con huevo.jpg" alt="Papas con huevo">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Papas con huevo</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Porción grande de papas bastón con huevo revuelto</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1400</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-
-                <!-- 3er Papas (Cheddar) -->
-                <div class="product">
-                    <img src="/assets/Papas cheddar.jpg" alt="Papas con cheddar">
-                    <div class="product-info">
-                        <!-- top -->
-                        <div class="product-top">
-                            <h3>Papas con cheddar</h3>
-                        </div>
-
-                        <!-- mid -->
-                        <div class="product-mid">
-                            <p>Porción grande de papas bastón cubiertas de cheddar y panceta</p>
-                        </div>
-
-                        <!-- bottom -->
-                        <div class="product-bot">
-                            <span>$1700</span>
-                            <button class="btn-add">Comprar</button>
-                        </div>
-                     </div>
-                </div>
-                <div class="postres">
-                    <!-- 1er Postre (Flan) -->
-                    <div class="product">
-                        <img src="/assets/Lomo especial.png" alt="Flan">
-                        <div class="product-info">
-                            <!-- top -->
-                            <div class="product-top">
-                                <h3>Flan</h3>
-                            </div>
-
-                            <!-- mid -->
-                            <div class="product-mid">
-                                <p></p>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="product-bot">
-                                <span>$600</span>
-                                <button class="btn-add">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2do Postre (Chocotorta) -->
-                    <div class="product">
-                        <img src="/assets/Lomo especial.png" alt="Chocotorta">
-                        <div class="product-info">
-                            <!-- top -->
-                            <div class="product-top">
-                                <h3>Chocotorta</h3>
-                            </div>
-
-                            <!-- mid -->
-                            <div class="product-mid">
-                                <p></p>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="product-bot">
-                                <span>$600</span>
-                                <button class="btn-add">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 3er Postre (Tiramisú) -->
-                    <div class="product">
-                        <img src="/assets/Lomo especial.png" alt="Tiramisú">
-                        <div class="product-info">
-                            <!-- top -->
-                            <div class="product-top">
-                                <h3>Tiramisú</h3>
-                            </div>
-
-                            <!-- mid -->
-                            <div class="product-mid">
-                                <p></p>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="product-bot">
-                                <span>$600</span>
-                                <button class="btn-add">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 4to (Postre oreo) -->
-                    <div class="product">
-                        <img src="/assets/Lomo especial.png" alt="Postre Oreo">
-                        <div class="product-info">
-                            <!-- top -->
-                            <div class="product-top">
-                                <h3>Postre Oreo</h3>
-                            </div>
-
-                            <!-- mid -->
-                            <div class="product-mid">
-                                <p></p>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="product-bot">
-                                <span>$600</span>
-                                <button class="btn-add">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                        
+                </div>            -->
             </div>
         </div>
-
-           
-        </section>
+     </section>
             
-
          <!--Contacto  -->        
 
         <section id="contact">
@@ -674,7 +206,8 @@
         </div>
    
     </footer>
-        
-
+    <div class="add-modal"></div>
+     <script src="./data.js"></script>   
+    <script src="./main.js"></script>
 </body>
 </html>
