@@ -125,8 +125,7 @@ const displayMenu = () => {
 };
 
 const closeOnScroll = () => {
-    if(cartBuy.classList.contains("open-cart") && 
-    menuList.classList.contains("open-menu")) {
+    if(cartBuy.classList.contains("open-cart")) {
         return;
     }
     cartBuy.classList.remove("open-cart");
@@ -134,7 +133,7 @@ const closeOnScroll = () => {
     overlay.classList.remove("show-overlay");
 };
 
-const closeOnClickScreen = (e) => {
+const closeOnClick = (e) => {
     if(e.target.classList.contains("navbar-link")) {
         return;
     };
@@ -142,6 +141,16 @@ const closeOnClickScreen = (e) => {
     cartBuy.classList.remove("open-cart");
     overlay.classList.remove("show-overlay");
 };
+
+
+const closeOnScreenClick = () => {
+	menuList.classList.remove("open-menu");
+	cartBuy.classList.remove("open-cart");
+	overlay.classList.remove("show-overlay");
+}
+
+
+
 
 //Logica del carrito
 
@@ -349,8 +358,8 @@ const init = () => {
     cartaMenuContainer.addEventListener("click", applyFilter);
     cartIcon.addEventListener("click", displayCart);
     menuHam.addEventListener("click", displayMenu);
-    window-addEventListener("scroll", closeOnScroll);
-    overlay.addEventListener("click", closeOnClickScreen);
+    window.addEventListener("scroll", closeOnScroll);
+    menuList.addEventListener("click", closeOnClick);
     document.addEventListener("DOMContentLoaded", renderCart);
     document.addEventListener("DOMContentLoaded", showCartTotal);
     productContainer.addEventListener("click", addProduct);
@@ -360,6 +369,8 @@ const init = () => {
     cartProducts.addEventListener("click", handleQuantity);
     buyBtn.addEventListener("click", confirmBuy);
     deleteBtn.addEventListener("click", deleteCart);
+    overlay.addEventListener("click", closeOnScreenClick);
+    
 };
 
 init();
