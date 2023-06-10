@@ -783,44 +783,5 @@ footer {
     border: none;
   }
   
-  .add-modal {
-    padding: 15px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-white);
-    background-color: green;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    transition: all 0.5s ease-out;
-    transform: translateY(200%);
-  }
   
-  .active-modal {
-    transform: translateY(0);
-    transition: all 0.5s ease-in;
-  }
-  
-  /**
-   * ----------------------------------------
-   * animation fade-in
-   * ----------------------------------------
-   */
-  @-webkit-keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 

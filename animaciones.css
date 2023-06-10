@@ -7,7 +7,7 @@ html {
     position: absolute;
     top: 97px;
     height: 100vh;
-    width: 200%;
+    width: 100%;
     z-index: 1;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -92,7 +92,13 @@ html {
  }
 
  .quantity-handler:hover {
-   background-color: orange;
+   background-color: green;
+   transition: all 0.1s ease-in;
+   color: white;
+ }
+
+ .down:hover {
+   background-color: red;
    transition: all 0.1s ease-in;
    color: white;
  }
@@ -101,24 +107,24 @@ html {
    transition: all 0.1s ease-in;
  }
 
- /* .btn-buy:hover {
+ .btn-buy:hover {
    transition: all 0.1s ease-in;
-   background-color: orange;
+   background-color:red;
    color: white;
-   border: 0.5px solid orange;
+   border: 0.5px solid red;
 
- } */
+ }
 
  .btn-delete {
    transition: all 0.1s ease-in;
  }
 
- /* .btn-delete:hover {
+ .btn-delete:hover {
    transition: all 0.1s ease-in;
-   background-color: orange;
+   background-color: red;
    color: white;
-   border: 0.5px solid orange;
- } */
+   border: 0.5px solid red;
+ }
 
  .buttons a {
    transition: all 0.1s ease-in;
@@ -252,5 +258,45 @@ header {
    animation-delay: 0.2s;
 }
 
+.add-modal {
+   padding: 15px 0px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   background-color: #a60f0f;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   transition: all 0.5s ease-out;
+   transform: translateY(250%);
+ }
+ 
+ .active-modal {
+   transform: translateY(0);
+   transition: all 0.5s ease-in;
+ }
+ 
+ /**
+  * ----------------------------------------
+  * animation fade-in
+  * ----------------------------------------
+  */
+ @-webkit-keyframes fade-in {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
+ @keyframes fade-in {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+ }
 
 
