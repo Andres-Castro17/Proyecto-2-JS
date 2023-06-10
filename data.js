@@ -25,7 +25,7 @@ const productData = [
 	},
     {
 		id: 4,
-		name: "Simple",
+		name: "Burger Simple",
 		price: 1500,
 		menu: "hamburguesas",
 		cardImg: "./assets/Hamburguesa-simple.jpg",
@@ -33,7 +33,7 @@ const productData = [
 	},
     {
 		id: 5,
-		name: "Completa",
+		name: "Burger Completa",
 		price: 1600,
 		menu: "hamburguesas",
 		cardImg: "./assets/Hamburguesa-Completa.jpg",
@@ -41,7 +41,7 @@ const productData = [
 	},
     {
 		id: 6,
-		name: "Especial",
+		name: "Burger Especial",
 		price: 1700,
 		menu: "hamburguesas",
 		cardImg: "/assets/Hamburguesa-Especial.jpg",
@@ -49,7 +49,7 @@ const productData = [
 	},
     {
 		id: 7,
-		name: "Americana",
+		name: "Burger Americana",
 		price: 1700,
 		menu: "hamburguesas",
 		cardImg: "./assets/Hamburguesa-americana.jpg",

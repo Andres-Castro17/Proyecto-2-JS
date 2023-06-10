@@ -136,16 +136,16 @@ html {
    color: white;
  }
 
- .menu {
-   transition: all 0.1s ease-in;
- }
+ /* .menu {
+   /* transition: all 0.1s ease-in; */
+ /* } */
 
- .menu:hover {
-   transition: all 0.1s ease-in;
-   background-color:#a60f0f;
+ /* .menu:hover { */
+   /* transition: all 0.1s ease-in; */
+   /* background-color:red;
    color: white;
-   border: none;
- }
+   border: none; */
+ /* } */
 
  .btn-add {
    transition: all 0.1s ease-in;
