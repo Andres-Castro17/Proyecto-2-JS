@@ -129,18 +129,18 @@ const productData = [
 	},
     {
 		id: 17,
-		name: "Flan",
+		name: "Chocotorta",
 		price: 600,
 		menu:"postre",
-		cardImg: "./assets/Flan.jpg",
+		cardImg: "./assets/Chocotorta.jpg",
         description: "",
 	},
     {
 		id: 18,
-		name: "Chocotorta",
+		name: "Postre Oreo",
 		price: 600,
 		menu: "postre",
-		cardImg: "./assets/Chocotorta.jpg",
+		cardImg: "./assets/Postre-oreo.jpg",
         description: "",
 	},
     {
@@ -153,10 +153,10 @@ const productData = [
 	},
     {
 		id: 20,
-		name: "Postre Oreo",
+		name: "Flan",
 		price: 600,
 		menu: "postre",
-		cardImg: "./assets/Postre-oreo.jpg",
+		cardImg: "./assets/Flan.jpg",
         description: "",
 	},
 ];
