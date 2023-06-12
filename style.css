@@ -590,7 +590,7 @@ main {
 }
 
 .product {
-    border: 3px solid #a60f0f;
+    border: 2px solid #a60f0f;
     display: flex;
     justify-content: space-around;
     width: 800px;
