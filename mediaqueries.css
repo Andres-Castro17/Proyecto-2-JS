@@ -133,9 +133,9 @@
         align-items: center;
      }
 
-     #hero img {
+    .slider {
         display: none;
-     }
+    }
 
      .buttons {
         display: flex;
